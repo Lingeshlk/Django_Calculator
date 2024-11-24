@@ -1,6 +1,6 @@
-from django.conf.urls import url
-from calc import views
+from django.urls import path, include  # Correct import
+from . import views  # Import your views
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
+    path('', views.index, name='index'),  # Define your URL patterns using path()
 ]
